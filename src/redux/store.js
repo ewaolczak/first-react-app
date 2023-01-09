@@ -1,4 +1,5 @@
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+// import { createStore } from 'redux';
 import shortid from 'shortid';
 import initialState from './initialState';
 
@@ -19,7 +20,7 @@ const reducer = (state, action) => {
   }
 };
 
-const store = createStore(
+const store = configureStore(
   reducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
