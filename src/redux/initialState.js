@@ -3,17 +3,17 @@ const initialState = {
     {
       id: 1,
       title: 'Books',
-      icon: 'book',
+      icon: 'book'
     },
     {
       id: 2,
       title: 'Movies',
-      icon: 'film',
+      icon: 'film'
     },
     {
       id: 3,
       title: 'Games',
-      icon: 'gamepad',
+      icon: 'gamepad'
     }
   ],
 
@@ -24,8 +24,9 @@ const initialState = {
     { id: 4, columnId: 2, title: 'Star Wars' },
     { id: 5, columnId: 3, title: 'The Witcher' },
     { id: 6, columnId: 3, title: 'Skyrim' }
-  ]
+  ],
 
+  searchInput: ''
 };
 
 export default initialState;
