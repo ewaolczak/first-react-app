@@ -9,6 +9,12 @@ export const getFilteredCards = ({ cards, searchInput }, columnId) =>
     (card) => card.columnId === columnId && strContains(card.title, searchInput)
   );
 
+//action selectors
+export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
+export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
+export const searchInput = (payload) => ({type: 'SEARCH_INPUT', payload})
+
+
 export const getAllColumns = (state) => state.columns;
 
 const reducer = (state, action) => {
