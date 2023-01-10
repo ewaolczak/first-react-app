@@ -4,9 +4,12 @@ import initialState from './initialState';
 import strContains from '../utils/strContains';
 
 //selectors
-//selectors
-export const getFilteredCards = ({ cards, searchInput }, columnId) => cards
-  .filter(card => card.columnId === columnId && strContains(card.title, searchInput));
+export const getFilteredCards = ({ cards, searchInput }, columnId) =>
+  cards.filter(
+    (card) => card.columnId === columnId && strContains(card.title, searchInput)
+  );
+
+export const getAllColumns = (state) => state.columns;
 
 const reducer = (state, action) => {
   switch (action.type) {
