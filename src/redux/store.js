@@ -30,7 +30,7 @@ const reducer = (state, action) => {
         cards: [...state.cards, { ...action.payload, id: shortid() }]
       };
     case 'SEARCH_INPUT':
-      return { ...state, searchInput: action.searchInput };
+      return { ...state, searchInput: action.payload };
     default:
       return state;
   }
