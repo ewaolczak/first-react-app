@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+nav {
+  background-color: darken($color-dark, 3%);
+}
+
+.nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $base-size * 2;
+  font-weight: bold;
+  margin: 0 ($base-size * 5);
+}
+
+a span {
+  color: $color-light;
+}
+
+.nav_list {
+  display: inline-flex;
+  list-style: none;
+
+  li {
+    padding: $base-size
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-light;
+  }
+}
