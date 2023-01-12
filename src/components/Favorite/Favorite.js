@@ -1,9 +1,10 @@
 import React from 'react';
+import style from './Favorite.module.scss'
 import PageTitle from '../PageTitle/PageTitle';
 
 const Favorite = () => {
   return (
-    <div>
+    <div className={style.favorite}>
       <PageTitle>Favorite</PageTitle>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
