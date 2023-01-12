@@ -8,15 +8,17 @@ export const getFilteredCards = ({ cards, searchInput }, columnId) =>
   cards.filter(
     (card) => card.columnId === columnId && strContains(card.title, searchInput)
   );
+export const getAllColumns = (state) => state.columns;
+export const getAllLists = state => state.lists;
 export const getListById = ({ lists }, listId) =>
   lists.find((list) => list.id === listId);
+export const getColumnsByList = ({ columns }, listId) =>
+  columns.filter((column) => column.listId === listId);
 
 //action selectors
 export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
 export const searchInput = (payload) => ({ type: 'SEARCH_INPUT', payload });
-
-export const getAllColumns = (state) => state.columns;
 
 const reducer = (state, action) => {
   switch (action.type) {
