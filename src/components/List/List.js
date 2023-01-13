@@ -21,7 +21,7 @@ const List = () => {
           <Column key={column.id} {...column} />
         ))}
       </section>
-      <ColumnForm />
+      <ColumnForm columnId={listId} />
     </div>
   );
 };

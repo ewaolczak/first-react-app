@@ -10,10 +10,11 @@ const ColumnForm = (props) => {
   const [icon, setIcon] = useState('');
 
   const dispatch = useDispatch();
+  let listId = props.columnId;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addColumn({ title, icon, listId: props.columnId }));
+    dispatch(addColumn({ title, icon, listId }));
     setTitle('');
     setIcon('');
   };
@@ -21,7 +22,7 @@ const ColumnForm = (props) => {
   return (
     <form className={styles.columnForm} onSubmit={handleSubmit}>
       <div>
-        <label>Title:</label>{' '}
+        <label>Title:</label>
         <TextInput
           type='text'
           value={title}
@@ -29,7 +30,7 @@ const ColumnForm = (props) => {
         />
       </div>
       <div>
-        <label>Icon:</label>{' '}
+        <label>Icon:</label>
         <TextInput
           type='text'
           value={icon}
