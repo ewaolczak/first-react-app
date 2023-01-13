@@ -9,17 +9,21 @@ export const getFilteredCards = ({ cards, searchInput }, columnId) =>
     (card) => card.columnId === columnId && strContains(card.title, searchInput)
   );
 export const getAllColumns = (state) => state.columns;
-export const getAllLists = state => state.lists;
+export const getAllLists = (state) => state.lists;
 export const getListById = ({ lists }, listId) =>
   lists.find((list) => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) =>
   columns.filter((column) => column.listId === listId);
+export const searchString = (state) => state.searchString;
 
 //action selectors
 export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
 // export const addList = (payload) => ({type: 'ADD_LIST', payload})
-export const searchInput = (payload) => ({ type: 'SEARCH_INPUT', payload });
+export const updateSearchString = (payload) => ({
+  type: 'UPDATE_SEARCHSTRING',
+  payload
+});
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -38,8 +42,11 @@ const reducer = (state, action) => {
     //     ...state,
     //     lists: [...state.lists, {...action.payload, id: shortid()}]
     //   }
-    case 'SEARCH_INPUT':
-      return { ...state, searchInput: action.payload };
+    case 'UPDATE_SEARCHSTRING':
+      return {
+        ...state,
+        searchInput: action.payload
+      };
     default:
       return state;
   }
