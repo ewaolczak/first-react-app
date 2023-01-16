@@ -22,9 +22,9 @@ const Favorite = () => {
       <div className={styles.column}>
         <ul className={styles.cards}>
           {favoriteCards.map((favoriteCard) => (
-            <Card
+            <Card 
               key={favoriteCard.id}
-              cardId={favoriteCard.cardId} // is this necessary?
+              cardId={favoriteCard.id}
               title={favoriteCard.title}
               isFavorite={favoriteCard.isFavorite}
             />
