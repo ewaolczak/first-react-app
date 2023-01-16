@@ -11,17 +11,18 @@ const Card = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(toggleCardFavorite({ cardId }));
-    setIsFavorite(!isFavorite)
+    dispatch(toggleCardFavorite( cardId ));
+    setIsFavorite((prev) => !prev);
   };
 
-  console.log(isFavorite)
+  console.log(isFavorite);
 
   return (
     <li className={styles.card}>
       {props.title}
       <button
-        className={clsx(styles.favorite_icon, isFavorite && styles.isFavorite)} onClick={handleSubmit}>
+        className={clsx(styles.favorite_icon, isFavorite && styles.isFavorite)}
+        onClick={handleSubmit}>
         <i className='fa fa-star-o'></i>
       </button>
     </li>
