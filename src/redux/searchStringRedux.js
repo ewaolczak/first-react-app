@@ -7,4 +7,4 @@ const searchStringReducer = (statePart = '', action) => {
   }
 };
 
-export default searchStringReducer
+export default searchStringReducer;

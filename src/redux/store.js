@@ -7,9 +7,9 @@ import cardsReducer from './cardsRedux';
 import searchStringReducer from './searchStringRedux';
 
 //selectors
-export const getFilteredCards = ({ cards, searchInput }, columnId) =>
+export const getFilteredCards = ({ cards, searchString }, columnId) =>
   cards.filter(
-    (card) => card.columnId === columnId && strContains(card.title, searchInput)
+    (card) => card.columnId === columnId && strContains(card.title, searchString)
   );
 export const getAllColumns = (state) => state.columns;
 export const getAllLists = (state) => state.lists;
