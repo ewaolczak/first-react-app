@@ -23,7 +23,7 @@ const Card = (props) => {
       <button
         className={clsx(styles.favorite_icon, isFavorite && styles.isFavorite)}
         onClick={handleSubmit}>
-        <i className='fa fa-star-o'></i>
+        <i className={clsx('fa fa-star-o', styles.star)}></i>
       </button>
     </li>
   );

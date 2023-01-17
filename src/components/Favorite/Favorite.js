@@ -12,7 +12,7 @@ const Favorite = () => {
     return (
       <div className={styles.favorite}>
         <PageTitle>Favorite</PageTitle>
-        <p>No favorite cards</p>
+        <p className={styles.no_favorite_cards}>No favorite cards</p>
       </div>
     );
 

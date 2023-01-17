@@ -12,3 +12,9 @@
   padding: ($base-size * 1.5);
   color: $color-dark;
 }
+
+.no_favorite_cards {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $base-size * 2;
+}
